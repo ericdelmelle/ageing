@@ -15,22 +15,11 @@ bibliography: "references.bib"
 runtime: shiny
 ---
 
-#---
-#title: "Ageing Landscapes"
-#subtitle: "Clustering Neighborhood Resources for Older Adults"
-#author: "Eric Mathieu Delmelle"
-#date: "October 2024"
-#format: 
-#  pdf:
-#    toc: true
-#    number-sections: true
-#bibliography: "references.bib"
-#---
 
 ## Ageing of the population
 <div style="text-align: center;">
 ```{r, echo=FALSE, fig.cap="Guess which lines belongs to which county?", out.width = '75%'}
-knitr::include_graphics("imgs/highlighted_spaghetti_plot_with_average_and_utah.png")
+knitr::include_graphics("imgs/highlighted_spaghetti_plot_with_average_and_utah.jpg")
 ```
 <div style="text-align: left;">
 
@@ -188,7 +177,7 @@ knitr::include_graphics("imgs/crossDomainCorrelations.png")
 ## Mapping PCAs
 <div style="text-align: center;">
 ```{r, echo=FALSE,  fig.cap="first PCA in physical domain", out.width = '70%'}
-knitr::include_graphics("imgs/PCAPhys1.png")
+knitr::include_graphics("imgs/PCAPhys1.jpg")
 ```
 <div style="text-align: left;">
 
@@ -196,7 +185,7 @@ knitr::include_graphics("imgs/PCAPhys1.png")
 ## Mapping PCAs
 <div style="text-align: center;">
 ```{r, echo=FALSE,  fig.cap="Second PCA in physical domain", out.width = '70%'}
-knitr::include_graphics("imgs/PCAPhys2.png")
+knitr::include_graphics("imgs/PCAPhys2.jpg")
 ```
 <div style="text-align: left;">
 
@@ -268,7 +257,7 @@ knitr::include_graphics("imgs/ClusterCharacteristicsB.png")
   
 ## Geographic Visualization:
 ```{r, echo=FALSE, out.width = '75%'}
-knitr::include_graphics("imgs/clusters.png")
+knitr::include_graphics("imgs/clusters.jpg")
 ```
 
 ## Geographic Visualization: ORD
@@ -283,7 +272,7 @@ knitr::include_graphics("imgs/PDX.png")
 
 ## Geographic Visualization: NYC
 ```{r, echo=FALSE, out.width = '70%'}
-knitr::include_graphics("imgs/NYC.png")
+knitr::include_graphics("imgs/NYC.jpg")
 ```
 ## Geographic Visualization: BUF
 ```{r, echo=FALSE, out.width = '70%'}
