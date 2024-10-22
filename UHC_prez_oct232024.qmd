@@ -1,0 +1,343 @@
+---
+title: "Ageing Landscapes "
+subtitle: "Clustering Neighborhood Resources for Older Adults"
+author: "Eric Mathieu Delmelle"
+date: "October 2024"
+format: 
+  revealjs: 
+    theme: simple
+    slideNumber: true
+    transition: slide
+    navigationMode: linear
+    controls: true
+    progress: true
+bibliography: "references.bib"
+runtime: shiny
+---
+
+#---
+#title: "Ageing Landscapes"
+#subtitle: "Clustering Neighborhood Resources for Older Adults"
+#author: "Eric Mathieu Delmelle"
+#date: "October 2024"
+#format: 
+#  pdf:
+#    toc: true
+#    number-sections: true
+#bibliography: "references.bib"
+#---
+
+## Ageing of the population
+<div style="text-align: center;">
+```{r, echo=FALSE, fig.cap="Guess which lines belongs to which county?", out.width = '75%'}
+knitr::include_graphics("imgs/highlighted_spaghetti_plot_with_average_and_utah.png")
+```
+<div style="text-align: left;">
+
+## Proportion of 60+
+- issues around health care provision
+- age related diseases (cognitive decline, Parkinson,...)
+<div style="text-align: center;">
+```{r, echo=FALSE,  fig.cap="Proportion of the Population 60+", out.width = '60%'}
+knitr::include_graphics("imgs/ksdensity_60plus_comparison.png")
+```
+<div style="text-align: left;">
+
+
+## Interesting geographic trends
+<div style="text-align: center;">
+```{r, echo=FALSE, out.width = '98%'}
+knitr::include_graphics("imgs/combined60propB.png")
+```
+<div style="text-align: left;">
+
+
+
+## Aim 1 of the grant
+
+<span style="color: green;">
+- **['...characterize change in neighborhood social & build environment variables relevant to cognition...']**</span> 
+
+- **Physical** function
+- **cognitive** function
+- ability to **age** in place
+
+
+## Characterize (social and built environment) (1/3)
+```{r, echo=FALSE, out.width = '80%'}
+knitr::include_graphics("imgs/connectedNeighborhoodsB.png")
+```
+
+## Characterize (social and built environment) (2/3)
+```{r, echo=FALSE, out.width = '70%'}
+knitr::include_graphics("imgs/connectedNeighborhoodsC.png")
+```
+
+## Characterize (social and built environment) (3/3)
+```{r, echo=FALSE, out.width = '70%'}
+knitr::include_graphics("imgs/connectedNeighborhoodsD.png")
+```
+
+## Research questions?
+- How can we characterize age-friendly communities?
+- Are there distinct **clusters** of neighborhood aging resources?
+  - Have the resources within **clusters** changed over time, and how? 
+- Our data reflect three domains:
+  - **physical** function, **cognitive** function, ability to **age** in place
+ 
+
+## Our approach - reproducible in `R` 
+
+```{r, echo=FALSE, out.width = '90%'}
+knitr::include_graphics("imgs/process.png")
+```
+
+## Dataset:
+  - **Yearly observations** for each census tract [1990-2022] 
+  - 72,246 tracts * 33 y. * 19 var. = 45,298,242 measurements
+```{r, echo=FALSE, out.width = '90%'}
+knitr::include_graphics("imgs/datasets.png")
+```
+
+## Example of a Variable (APA):
+<div style="text-align: center;">
+```{r, echo=FALSE,  fig.cap="Distribution of All Physical Activity Facilities for Adults (APA) by Year", out.width = '60%'}
+knitr::include_graphics("imgs/ggridge_histogram_apa_log.png")
+```
+<div style="text-align: left;">
+
+## Example of a Variable (APA):
+<div style="text-align: center;">
+```{r, echo=FALSE,  fig.cap="Geographic Distribution of APA Facilities for Adults in 2000", out.width = '70%'}
+knitr::include_graphics("imgs/apa_2000.png")
+```
+<div style="text-align: left;">
+
+## Example of a Variable  (Park):
+<div style="text-align: center;">
+```{r, echo=FALSE,  fig.cap="Fraction of park size (2000)", out.width = '70%'}
+knitr::include_graphics("imgs/park_2000.png")
+```
+<div style="text-align: left;">
+
+
+## Correlation among variables:
+<div style="text-align: center;">
+```{r, echo=FALSE,  fig.cap="Correlation among 19 variables considered in our study", out.width = '70%'}
+knitr::include_graphics("imgs/correlationPlot1.png")
+```
+<div style="text-align: left;">
+
+
+## Methods: `PCA` approach
+- technique of  dimensionality reduction
+- transforms a set of correlated variables into a smaller set of uncorrelated variables 
+- these are called principal components, which should explain a large amount of variance from initial dataset
+- **domain**-driven PCA or **data**-driven PCA
+
+## PCA results -physical domain:
+<div style="text-align: center;">
+```{r, echo=FALSE,  fig.cap="Scree plot for the physical domain", out.width = '70%'}
+knitr::include_graphics("imgs/scree_plot_physical.png")
+```
+<div style="text-align: left;">
+
+## PCA results -Cognitive domain:
+<div style="text-align: center;">
+```{r, echo=FALSE,  fig.cap="Scree plot for the cognitive domain", out.width = '70%'}
+knitr::include_graphics("imgs/scree_plot_cognitive.png")
+```
+<div style="text-align: left;">
+
+## PCA results -Ageing in place domain:
+<div style="text-align: center;">
+```{r, echo=FALSE,  fig.cap="Scree plot for the ageing domain", out.width = '70%'}
+knitr::include_graphics("imgs/scree_plot_ageing.png")
+```
+<div style="text-align: left;">
+
+## PCA results -Variables contribution:
+<div style="text-align: center;">
+```{r, echo=FALSE,  fig.cap="most influential variables in the physical domain", out.width = '70%'}
+knitr::include_graphics("imgs/pca_var_physical.png")
+```
+<div style="text-align: left;">
+
+## PCA results -Variables contribution:
+<div style="text-align: center;">
+```{r, echo=FALSE,  fig.cap="most influential variables in the ageing domain", out.width = '70%'}
+knitr::include_graphics("imgs/pca_var_cognitive.png")
+```
+<div style="text-align: left;">
+
+## PCA results -Variables contribution:
+<div style="text-align: center;">
+```{r, echo=FALSE,  fig.cap="most influential variables in the physical domain", out.width = '70%'}
+knitr::include_graphics("imgs/pca_var_ageing.png")
+```
+<div style="text-align: left;">
+
+
+## PCA results -Correlations among PCAs:
+<div style="text-align: center;">
+```{r, echo=FALSE,  fig.cap="correlation among PCAs - which ones to choose?", out.width = '50%'}
+knitr::include_graphics("imgs/crossDomainCorrelations.png")
+```
+<div style="text-align: left;">
+
+## Mapping PCAs
+<div style="text-align: center;">
+```{r, echo=FALSE,  fig.cap="first PCA in physical domain", out.width = '70%'}
+knitr::include_graphics("imgs/PCAPhys1.png")
+```
+<div style="text-align: left;">
+
+
+## Mapping PCAs
+<div style="text-align: center;">
+```{r, echo=FALSE,  fig.cap="Second PCA in physical domain", out.width = '70%'}
+knitr::include_graphics("imgs/PCAPhys2.png")
+```
+<div style="text-align: left;">
+
+## Mapping PCAs
+<div style="text-align: center;">
+```{r, echo=FALSE,  fig.cap="Second PCA in ageing in place domain", out.width = '70%'}
+knitr::include_graphics("imgs/PCAAge2.png")
+```
+<div style="text-align: left;">
+
+
+## Methods: `kmeans` algorithm
+- **Observations** for each geographic unit $i$ in matrix $\mathbf {x}$
+  - changes over time, ... different variables
+  - rescale your data (e.g. between 0 and 1)
+- Find $k$ clusters $S = \{S_{1}, S_{2}, ..., S_{k}\}$ so that sum of square within the cluster is minimized
+$\displaystyle \mathop {\operatorname {arg\,min} } _{\mathbf {S} }\sum _{i=1}^{k}\sum _{\mathbf {x} \in S_{i}}\left\|\mathbf {x} -{\boldsymbol {\mu }}_{i}\right\|^{2}$ with  
+$\boldsymbol {\mu _{i}}={\frac {1}{|S_{i}|}}\sum_{\mathbf {x} \in S_{i}}\mathbf {x}$
+- Number of clusters $k$? Calinski-Harabasz stopping rule
+
+
+## k-means result (1):
+<div style="text-align: center;">
+```{r, echo=FALSE,  fig.cap="decreasing within clusters sum of squares", out.width = '70%'}
+knitr::include_graphics("imgs/elbow_plot.png")
+```
+<div style="text-align: left;">
+
+## k-means results (2):
+```{r, echo=FALSE,  fig.cap="silhouette plot (2 or 6 clusters?)", out.width = '70%'}
+knitr::include_graphics("imgs/silhouette_plot.png")
+```
+
+## k-means results (3):
+```{r, echo=FALSE,  fig.cap="What characterizes these 6 clusters?", out.width = '70%'}
+knitr::include_graphics("imgs/ClusterCharacteristicsB.png")
+```
+
+## Cluster characteristics (1)
+  - `cluster 1`: Intensely Active Urban Cores (red)
+    - (n=95 1990 to n=1300 in 2020)
+    - Areas with intense physical engagement 
+    
+  - `cluster 2`: Emerging growth centers (orange)
+    - (n=117 1990 to n=637 in 2020)
+    - Emerging as activity hubs (suburban areas) 
+    
+## Cluster characteristics (2)
+  - `cluster 3`: Green Living (green)
+    - Areas with a focus on sustainability or outdoor activity
+    - Supports green spaces or recreational activities
+    - May include towns prioritizing eco-friendly living
+    
+ 
+  - `cluster 4`: High-Intensity Niche Zones (yellow)
+    - Very high activity levels of physical engagement
+    - High-performance sports are prevalent
+    - (e.g. lower Manhattan, center City in Philly)
+ 
+## Cluster characteristics (3) 
+  - `cluster 5`: Residential Suburbs (blue)
+    - Increased residential development with accompanying amenities
+    - (n=3,158 1990 to n=19,434 in 2020) 
+    - Stable but less diverse physical activity
+
+  - `cluster 6`: Rural stability (light blue)
+    - stable areas with moderate opportunities for physical engagement. Gradual changes.
+  
+  
+## Geographic Visualization:
+```{r, echo=FALSE, out.width = '75%'}
+knitr::include_graphics("imgs/clusters.png")
+```
+
+## Geographic Visualization: ORD
+```{r, echo=FALSE, out.width = '70%'}
+knitr::include_graphics("imgs/ORD.png")
+```
+
+## Geographic Visualization: PDX
+```{r, echo=FALSE, out.width = '70%'}
+knitr::include_graphics("imgs/PDX.png")
+```
+
+## Geographic Visualization: NYC
+```{r, echo=FALSE, out.width = '70%'}
+knitr::include_graphics("imgs/NYC.png")
+```
+## Geographic Visualization: BUF
+```{r, echo=FALSE, out.width = '70%'}
+knitr::include_graphics("imgs/BUF.png")
+```
+## Geographic Visualization: DTW
+```{r, echo=FALSE, out.width = '70%'}
+knitr::include_graphics("imgs/DTW.png")
+```
+
+## Geographic Visualization: Villages
+```{r, echo=FALSE, out.width = '70%'}
+knitr::include_graphics("imgs/VIL.png")
+```
+
+## Geographic Visualization: PHL
+```{r, echo=FALSE, out.width = '70%'}
+knitr::include_graphics("imgs/PHL.png")
+```
+
+## Changing clusters (1)
+```{r, echo=FALSE, out.width = '70%'}
+knitr::include_graphics("imgs/sankey.png")
+```
+
+## Changing clusters (2)
+```{r, echo=FALSE, out.width = '70%'}
+knitr::include_graphics("imgs/sankeyB.png")
+```
+
+
+## Preliminary observations (1/2)
+- A strong group of census tracts remain in the same cluster
+  - rural, but rapidly giving space to residential suburbs
+- Cities tend to see a more diverse set of clusters
+  - clusters are much smaller
+
+## Preliminary observations (2/2)
+- Is our approach valid to characterize ageing communities?
+- Are there distinct **clusters** of neighborhood aging resources?
+- Have the resources within **clusters** changed over time, and how? 
+
+## Next steps
+- Data driven `PCA`
+- Associations with demographics factors (paper 2)
+
+
+## Timeline
+<div style="text-align: center;">
+```{r, echo=FALSE, fig.cap="We are on-time with our timeline", out.width = '60%'}
+knitr::include_graphics("imgs/timeline.png")
+```
+<div style="text-align: left;">
+
+## Thank you
+- NIA 5R01AG072634-03: Contribution of Longitudinal Neighborhood Determinants to Cognitive Health and Dementia Disparities within a Multi-Ethnic Cohort.
+- Y. Michael, A. Auchincloss, T. McAlexander, S. Melley, K. Moore, B. Sánchez, S. Francisco and **J. Hirsch**
