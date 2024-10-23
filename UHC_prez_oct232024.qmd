@@ -2,7 +2,6 @@
 title: "Ageing Landscapes "
 subtitle: "Clustering Neighborhood Resources for Older Adults"
 author: "Eric Mathieu Delmelle"
-date: ""
 format: 
   revealjs: 
     theme: simple
@@ -325,6 +324,7 @@ knitr::include_graphics("imgs/PHL.png")
 
 ## Next steps
 - What if only 2 clusters?
+- Constrained clustering `constrclust`
 - Data driven `PCA`
 - Associations with demographics factors (paper 2)
 
