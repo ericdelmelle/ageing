@@ -318,9 +318,11 @@ knitr::include_graphics("imgs/PHL.png")
   - clusters are much smaller
 
 ## Preliminary observations (2/2)
-- Is our approach valid to characterize ageing communities?
-- Are there distinct **clusters** of neighborhood aging resources?
-- Have the resources within **clusters** changed over time, and how? 
+  - Our study identifies distinct clusters of neighborhood resources that support physical and cognitive engagement for older adults
+  - Trends 
+    - growth of active urban cores 
+    - expanding residential suburbs 
+  - Importance of targeted community planning to create age-friendly environments that enable aging in place.
 
 ## Next steps
 - What if only 2 clusters?
