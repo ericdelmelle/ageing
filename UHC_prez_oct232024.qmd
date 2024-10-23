@@ -25,7 +25,7 @@ knitr::include_graphics("imgs/highlighted_spaghetti_plot_with_average_and_utah.j
 
 ## Proportion of 60+
 - issues around health care provision
-- age related diseases (cognitive decline, Parkinson,...)
+- age related diseases (incl. cognitive decline)
 <div style="text-align: center;">
 ```{r, echo=FALSE,  fig.cap="Proportion of the Population 60+", out.width = '60%'}
 knitr::include_graphics("imgs/ksdensity_60plus_comparison.png")
