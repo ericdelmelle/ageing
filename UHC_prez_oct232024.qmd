@@ -2,7 +2,7 @@
 title: "Ageing Landscapes "
 subtitle: "Clustering Neighborhood Resources for Older Adults"
 author: "Eric Mathieu Delmelle"
-date: "October 2024"
+date: ""
 format: 
   revealjs: 
     theme: simple
