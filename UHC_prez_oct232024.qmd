@@ -52,17 +52,17 @@ knitr::include_graphics("imgs/combined60propB.png")
 - ability to **age** in place
 
 
-## Characterize (social and built environment) (1/3)
+## Characterize (social and built) environments (1/3)
 ```{r, echo=FALSE, out.width = '80%'}
 knitr::include_graphics("imgs/connectedNeighborhoodsB.png")
 ```
 
-## Characterize (social and built environment) (2/3)
+## Characterize (social and built) environments (2/3)
 ```{r, echo=FALSE, out.width = '70%'}
 knitr::include_graphics("imgs/connectedNeighborhoodsC.png")
 ```
 
-## Characterize (social and built environment) (3/3)
+## Characterize (social and built) environments (3/3)
 ```{r, echo=FALSE, out.width = '70%'}
 knitr::include_graphics("imgs/connectedNeighborhoodsD.png")
 ```
@@ -119,55 +119,55 @@ knitr::include_graphics("imgs/correlationPlot1.png")
 
 
 ## Methods: `PCA` approach
-- technique of  dimensionality reduction
+- dimensionality reduction
 - transforms a set of correlated variables into a smaller set of uncorrelated variables 
 - these are called principal components, which should explain a large amount of variance from initial dataset
 - **domain**-driven PCA or **data**-driven PCA
 
 ## PCA results -physical domain:
 <div style="text-align: center;">
-```{r, echo=FALSE,  fig.cap="Scree plot for the physical domain", out.width = '70%'}
+```{r, echo=FALSE, out.width = '70%'}
 knitr::include_graphics("imgs/scree_plot_physical.png")
 ```
 <div style="text-align: left;">
 
 ## PCA results -Cognitive domain:
 <div style="text-align: center;">
-```{r, echo=FALSE,  fig.cap="Scree plot for the cognitive domain", out.width = '70%'}
+```{r, echo=FALSE, out.width = '70%'}
 knitr::include_graphics("imgs/scree_plot_cognitive.png")
 ```
 <div style="text-align: left;">
 
 ## PCA results -Ageing in place domain:
 <div style="text-align: center;">
-```{r, echo=FALSE,  fig.cap="Scree plot for the ageing domain", out.width = '70%'}
+```{r, echo=FALSE,  out.width = '70%'}
 knitr::include_graphics("imgs/scree_plot_ageing.png")
 ```
 <div style="text-align: left;">
 
 ## PCA results -Variables contribution:
 <div style="text-align: center;">
-```{r, echo=FALSE,  fig.cap="most influential variables in the physical domain", out.width = '70%'}
+```{r, echo=FALSE,   out.width = '70%'}
 knitr::include_graphics("imgs/pca_var_physical.png")
 ```
 <div style="text-align: left;">
 
 ## PCA results -Variables contribution:
 <div style="text-align: center;">
-```{r, echo=FALSE,  fig.cap="most influential variables in the ageing domain", out.width = '70%'}
+```{r, echo=FALSE, out.width = '70%'}
 knitr::include_graphics("imgs/pca_var_cognitive.png")
 ```
 <div style="text-align: left;">
 
 ## PCA results -Variables contribution:
 <div style="text-align: center;">
-```{r, echo=FALSE,  fig.cap="most influential variables in the physical domain", out.width = '70%'}
+```{r, echo=FALSE, out.width = '70%'}
 knitr::include_graphics("imgs/pca_var_ageing.png")
 ```
 <div style="text-align: left;">
 
 
-## PCA results -Correlations among PCAs:
+## PCA results -correlation among PCAs:
 <div style="text-align: center;">
 ```{r, echo=FALSE,  fig.cap="correlation among PCAs - which ones to choose?", out.width = '50%'}
 knitr::include_graphics("imgs/crossDomainCorrelations.png")
@@ -176,7 +176,7 @@ knitr::include_graphics("imgs/crossDomainCorrelations.png")
 
 ## Mapping PCAs
 <div style="text-align: center;">
-```{r, echo=FALSE,  fig.cap="first PCA in physical domain", out.width = '70%'}
+```{r, echo=FALSE,  fig.cap="first PCA in the physical domain", out.width = '70%'}
 knitr::include_graphics("imgs/PCAPhys1.jpg")
 ```
 <div style="text-align: left;">
@@ -184,7 +184,7 @@ knitr::include_graphics("imgs/PCAPhys1.jpg")
 
 ## Mapping PCAs
 <div style="text-align: center;">
-```{r, echo=FALSE,  fig.cap="Second PCA in physical domain", out.width = '70%'}
+```{r, echo=FALSE,  fig.cap="Second PCA in the physical domain", out.width = '70%'}
 knitr::include_graphics("imgs/PCAPhys2.jpg")
 ```
 <div style="text-align: left;">
@@ -200,7 +200,7 @@ knitr::include_graphics("imgs/PCAAge2.png")
 ## Methods: `kmeans` algorithm
 - **Observations** for each geographic unit $i$ in matrix $\mathbf {x}$
   - changes over time, ... different variables
-  - rescale your data (e.g. between 0 and 1)
+  - rescale variables (between 0 and 1)
 - Find $k$ clusters $S = \{S_{1}, S_{2}, ..., S_{k}\}$ so that sum of square within the cluster is minimized
 $\displaystyle \mathop {\operatorname {arg\,min} } _{\mathbf {S} }\sum _{i=1}^{k}\sum _{\mathbf {x} \in S_{i}}\left\|\mathbf {x} -{\boldsymbol {\mu }}_{i}\right\|^{2}$ with  
 $\boldsymbol {\mu _{i}}={\frac {1}{|S_{i}|}}\sum_{\mathbf {x} \in S_{i}}\mathbf {x}$
@@ -209,7 +209,7 @@ $\boldsymbol {\mu _{i}}={\frac {1}{|S_{i}|}}\sum_{\mathbf {x} \in S_{i}}\mathbf 
 
 ## k-means result (1):
 <div style="text-align: center;">
-```{r, echo=FALSE,  fig.cap="decreasing within clusters sum of squares", out.width = '70%'}
+```{r, echo=FALSE,  fig.cap="decreasing WSS", out.width = '70%'}
 knitr::include_graphics("imgs/elbow_plot.png")
 ```
 <div style="text-align: left;">
@@ -219,45 +219,57 @@ knitr::include_graphics("imgs/elbow_plot.png")
 knitr::include_graphics("imgs/silhouette_plot.png")
 ```
 
+  
+## Geographic Visualization:
+```{r, echo=FALSE, out.width = '75%'}
+knitr::include_graphics("imgs/clusters.jpg")
+```
+
+
 ## k-means results (3):
 ```{r, echo=FALSE,  fig.cap="What characterizes these 6 clusters?", out.width = '70%'}
 knitr::include_graphics("imgs/ClusterCharacteristicsB.png")
 ```
 
 ## Cluster characteristics (1)
-  - `cluster 1`: Intensely Active Urban Cores (red)
+  - <span style="color: red;">`cluster 1`</span>: Intensely Active Urban Cores (red)
     - (n=95 1990 to n=1300 in 2020)
     - Areas with intense physical engagement 
     
-  - `cluster 2`: Emerging growth centers (orange)
+  - <span style="color: orange;">`cluster 2`</span>: Emerging growth centers (orange)
     - (n=117 1990 to n=637 in 2020)
     - Emerging as activity hubs (suburban areas) 
     
 ## Cluster characteristics (2)
-  - `cluster 3`: Green Living (green)
+  - <span style="color: green;">`cluster 3`</span>: Green Living (green)
     - Areas with a focus on sustainability or outdoor activity
     - Supports green spaces or recreational activities
     - May include towns prioritizing eco-friendly living
     
  
-  - `cluster 4`: High-Intensity Niche Zones (yellow)
+  - <span style="color: yellow;">`cluster 4`</span>: High-Intensity Niche Zones (yellow)
     - Very high activity levels of physical engagement
     - High-performance sports are prevalent
     - (e.g. lower Manhattan, center City in Philly)
  
 ## Cluster characteristics (3) 
-  - `cluster 5`: Residential Suburbs (blue)
+  - <span style="color: blue;">`cluster 5`</span>: Residential Suburbs (blue)
     - Increased residential development with accompanying amenities
     - (n=3,158 1990 to n=19,434 in 2020) 
-    - Stable but less diverse physical activity
 
-  - `cluster 6`: Rural stability (light blue)
-    - stable areas with moderate opportunities for physical engagement. Gradual changes.
-  
-  
-## Geographic Visualization:
-```{r, echo=FALSE, out.width = '75%'}
-knitr::include_graphics("imgs/clusters.jpg")
+  - <span style="color: #dbffe2;">`cluster 6`</span>: Rural stability (pastel green)
+    - stable areas with limited opportunities for physical engagement. 
+    
+
+
+## Changing clusters (1)
+```{r, echo=FALSE, out.width = '70%'}
+knitr::include_graphics("imgs/sankey.png")
+```
+
+## Changing clusters (2)
+```{r, echo=FALSE, out.width = '70%'}
+knitr::include_graphics("imgs/sankeyB.png")
 ```
 
 ## Geographic Visualization: ORD
@@ -278,6 +290,11 @@ knitr::include_graphics("imgs/NYC.jpg")
 ```{r, echo=FALSE, out.width = '70%'}
 knitr::include_graphics("imgs/BUF.png")
 ```
+## Geographic Visualization: CLT
+```{r, echo=FALSE, out.width = '70%'}
+knitr::include_graphics("imgs/CLT.png")
+```
+
 ## Geographic Visualization: DTW
 ```{r, echo=FALSE, out.width = '70%'}
 knitr::include_graphics("imgs/DTW.png")
@@ -293,20 +310,11 @@ knitr::include_graphics("imgs/VIL.png")
 knitr::include_graphics("imgs/PHL.png")
 ```
 
-## Changing clusters (1)
-```{r, echo=FALSE, out.width = '70%'}
-knitr::include_graphics("imgs/sankey.png")
-```
-
-## Changing clusters (2)
-```{r, echo=FALSE, out.width = '70%'}
-knitr::include_graphics("imgs/sankeyB.png")
-```
 
 
 ## Preliminary observations (1/2)
 - A strong group of census tracts remain in the same cluster
-  - rural, but rapidly giving space to residential suburbs
+  - rural (pastel), but rapidly giving space to residential suburbs (blue)
 - Cities tend to see a more diverse set of clusters
   - clusters are much smaller
 
@@ -316,6 +324,7 @@ knitr::include_graphics("imgs/sankeyB.png")
 - Have the resources within **clusters** changed over time, and how? 
 
 ## Next steps
+- What if only 2 clusters?
 - Data driven `PCA`
 - Associations with demographics factors (paper 2)
 

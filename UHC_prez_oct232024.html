@@ -392,16 +392,16 @@ Eric Mathieu Delmelle
 <li>ability to <strong>age</strong> in place</li>
 </ul>
 </section>
-<section id="characterize-social-and-built-environment-13" class="slide level2">
-<h2>Characterize (social and built environment) (1/3)</h2>
+<section id="characterize-social-and-built-environments-13" class="slide level2">
+<h2>Characterize (social and built) environments (1/3)</h2>
 
 <img data-src="imgs/connectedNeighborhoodsB.png" style="width:80.0%" class="r-stretch"></section>
-<section id="characterize-social-and-built-environment-23" class="slide level2">
-<h2>Characterize (social and built environment) (2/3)</h2>
+<section id="characterize-social-and-built-environments-23" class="slide level2">
+<h2>Characterize (social and built) environments (2/3)</h2>
 
 <img data-src="imgs/connectedNeighborhoodsC.png" style="width:70.0%" class="r-stretch"></section>
-<section id="characterize-social-and-built-environment-33" class="slide level2">
-<h2>Characterize (social and built environment) (3/3)</h2>
+<section id="characterize-social-and-built-environments-33" class="slide level2">
+<h2>Characterize (social and built) environments (3/3)</h2>
 
 <img data-src="imgs/connectedNeighborhoodsD.png" style="width:70.0%" class="r-stretch"></section>
 <section id="research-questions" class="slide level2">
@@ -503,7 +503,7 @@ Eric Mathieu Delmelle
 <section id="methods-pca-approach" class="slide level2">
 <h2>Methods: <code>PCA</code> approach</h2>
 <ul>
-<li>technique of dimensionality reduction</li>
+<li>dimensionality reduction</li>
 <li>transforms a set of correlated variables into a smaller set of uncorrelated variables</li>
 <li>these are called principal components, which should explain a large amount of variance from initial dataset</li>
 <li><strong>domain</strong>-driven PCA or <strong>data</strong>-driven PCA</li>
@@ -515,12 +515,7 @@ Eric Mathieu Delmelle
 
 <div class="cell">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
 <p><img data-src="imgs/scree_plot_physical.png" style="width:70.0%"></p>
-<figcaption>Scree plot for the physical domain</figcaption>
-</figure>
-</div>
 </div>
 </div>
 <div style="text-align: left;">
@@ -532,12 +527,7 @@ Eric Mathieu Delmelle
 
 <div class="cell">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
 <p><img data-src="imgs/scree_plot_cognitive.png" style="width:70.0%"></p>
-<figcaption>Scree plot for the cognitive domain</figcaption>
-</figure>
-</div>
 </div>
 </div>
 <div style="text-align: left;">
@@ -549,12 +539,7 @@ Eric Mathieu Delmelle
 
 <div class="cell">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
 <p><img data-src="imgs/scree_plot_ageing.png" style="width:70.0%"></p>
-<figcaption>Scree plot for the ageing domain</figcaption>
-</figure>
-</div>
 </div>
 </div>
 <div style="text-align: left;">
@@ -566,12 +551,7 @@ Eric Mathieu Delmelle
 
 <div class="cell">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
 <p><img data-src="imgs/pca_var_physical.png" style="width:70.0%"></p>
-<figcaption>most influential variables in the physical domain</figcaption>
-</figure>
-</div>
 </div>
 </div>
 <div style="text-align: left;">
@@ -583,12 +563,7 @@ Eric Mathieu Delmelle
 
 <div class="cell">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
 <p><img data-src="imgs/pca_var_cognitive.png" style="width:70.0%"></p>
-<figcaption>most influential variables in the ageing domain</figcaption>
-</figure>
-</div>
 </div>
 </div>
 <div style="text-align: left;">
@@ -600,20 +575,15 @@ Eric Mathieu Delmelle
 
 <div class="cell">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
 <p><img data-src="imgs/pca_var_ageing.png" style="width:70.0%"></p>
-<figcaption>most influential variables in the physical domain</figcaption>
-</figure>
-</div>
 </div>
 </div>
 <div style="text-align: left;">
 
 
 </div></div></section>
-<section id="pca-results--correlations-among-pcas" class="slide level2">
-<h2>PCA results -Correlations among PCAs:</h2>
+<section id="pca-results--correlation-among-pcas" class="slide level2">
+<h2>PCA results -correlation among PCAs:</h2>
 <div style="text-align: center;">
 
 <div class="cell">
@@ -638,7 +608,7 @@ Eric Mathieu Delmelle
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="imgs/PCAPhys1.jpg" style="width:70.0%"></p>
-<figcaption>first PCA in physical domain</figcaption>
+<figcaption>first PCA in the physical domain</figcaption>
 </figure>
 </div>
 </div>
@@ -656,7 +626,7 @@ Eric Mathieu Delmelle
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="imgs/PCAPhys2.jpg" style="width:70.0%"></p>
-<figcaption>Second PCA in physical domain</figcaption>
+<figcaption>Second PCA in the physical domain</figcaption>
 </figure>
 </div>
 </div>
@@ -688,7 +658,7 @@ Eric Mathieu Delmelle
 <li><strong>Observations</strong> for each geographic unit <span class="math inline">\(i\)</span> in matrix <span class="math inline">\(\mathbf {x}\)</span>
 <ul>
 <li>changes over time, … different variables</li>
-<li>rescale your data (e.g.&nbsp;between 0 and 1)</li>
+<li>rescale variables (between 0 and 1)</li>
 </ul></li>
 <li>Find <span class="math inline">\(k\)</span> clusters <span class="math inline">\(S = \{S_{1}, S_{2}, ..., S_{k}\}\)</span> so that sum of square within the cluster is minimized <span class="math inline">\(\displaystyle \mathop {\operatorname {arg\,min} } _{\mathbf {S} }\sum _{i=1}^{k}\sum _{\mathbf {x} \in S_{i}}\left\|\mathbf {x} -{\boldsymbol {\mu }}_{i}\right\|^{2}\)</span> with<br>
 <span class="math inline">\(\boldsymbol {\mu _{i}}={\frac {1}{|S_{i}|}}\sum_{\mathbf {x} \in S_{i}}\mathbf {x}\)</span></li>
@@ -704,7 +674,7 @@ Eric Mathieu Delmelle
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="imgs/elbow_plot.png" style="width:70.0%"></p>
-<figcaption>decreasing within clusters sum of squares</figcaption>
+<figcaption>decreasing WSS</figcaption>
 </figure>
 </div>
 </div>
@@ -716,6 +686,10 @@ Eric Mathieu Delmelle
 <h2>k-means results (2):</h2>
 
 <img data-src="imgs/silhouette_plot.png" style="width:70.0%" class="r-stretch quarto-figure-center"><p class="caption">silhouette plot (2 or 6 clusters?)</p></section>
+<section id="geographic-visualization" class="slide level2">
+<h2>Geographic Visualization:</h2>
+
+<img data-src="imgs/clusters.jpg" style="width:75.0%" class="r-stretch"></section>
 <section id="k-means-results-3" class="slide level2">
 <h2>k-means results (3):</h2>
 
@@ -723,12 +697,12 @@ Eric Mathieu Delmelle
 <section id="cluster-characteristics-1" class="slide level2">
 <h2>Cluster characteristics (1)</h2>
 <ul>
-<li><code>cluster 1</code>: Intensely Active Urban Cores (red)
+<li><span style="color: red;"><code>cluster 1</code></span>: Intensely Active Urban Cores (red)
 <ul>
 <li>(n=95 1990 to n=1300 in 2020)</li>
 <li>Areas with intense physical engagement</li>
 </ul></li>
-<li><code>cluster 2</code>: Emerging growth centers (orange)
+<li><span style="color: orange;"><code>cluster 2</code></span>: Emerging growth centers (orange)
 <ul>
 <li>(n=117 1990 to n=637 in 2020)</li>
 <li>Emerging as activity hubs (suburban areas)</li>
@@ -738,13 +712,13 @@ Eric Mathieu Delmelle
 <section id="cluster-characteristics-2" class="slide level2">
 <h2>Cluster characteristics (2)</h2>
 <ul>
-<li><code>cluster 3</code>: Green Living (green)
+<li><span style="color: green;"><code>cluster 3</code></span>: Green Living (green)
 <ul>
 <li>Areas with a focus on sustainability or outdoor activity</li>
 <li>Supports green spaces or recreational activities</li>
 <li>May include towns prioritizing eco-friendly living</li>
 </ul></li>
-<li><code>cluster 4</code>: High-Intensity Niche Zones (yellow)
+<li><span style="color: yellow;"><code>cluster 4</code></span>: High-Intensity Niche Zones (yellow)
 <ul>
 <li>Very high activity levels of physical engagement</li>
 <li>High-performance sports are prevalent</li>
@@ -755,22 +729,25 @@ Eric Mathieu Delmelle
 <section id="cluster-characteristics-3" class="slide level2">
 <h2>Cluster characteristics (3)</h2>
 <ul>
-<li><code>cluster 5</code>: Residential Suburbs (blue)
+<li><span style="color: blue;"><code>cluster 5</code></span>: Residential Suburbs (blue)
 <ul>
 <li>Increased residential development with accompanying amenities</li>
 <li>(n=3,158 1990 to n=19,434 in 2020)</li>
-<li>Stable but less diverse physical activity</li>
 </ul></li>
-<li><code>cluster 6</code>: Rural stability (light blue)
+<li><span style="color: #dbffe2;"><code>cluster 6</code></span>: Rural stability (pastel green)
 <ul>
-<li>stable areas with moderate opportunities for physical engagement. Gradual changes.</li>
+<li>stable areas with limited opportunities for physical engagement.</li>
 </ul></li>
 </ul>
 </section>
-<section id="geographic-visualization" class="slide level2">
-<h2>Geographic Visualization:</h2>
+<section id="changing-clusters-1" class="slide level2">
+<h2>Changing clusters (1)</h2>
 
-<img data-src="imgs/clusters.jpg" style="width:75.0%" class="r-stretch"></section>
+<img data-src="imgs/sankey.png" style="width:70.0%" class="r-stretch"></section>
+<section id="changing-clusters-2" class="slide level2">
+<h2>Changing clusters (2)</h2>
+
+<img data-src="imgs/sankeyB.png" style="width:70.0%" class="r-stretch"></section>
 <section id="geographic-visualization-ord" class="slide level2">
 <h2>Geographic Visualization: ORD</h2>
 
@@ -787,6 +764,10 @@ Eric Mathieu Delmelle
 <h2>Geographic Visualization: BUF</h2>
 
 <img data-src="imgs/BUF.png" style="width:70.0%" class="r-stretch"></section>
+<section id="geographic-visualization-clt" class="slide level2">
+<h2>Geographic Visualization: CLT</h2>
+
+<img data-src="imgs/CLT.png" style="width:70.0%" class="r-stretch"></section>
 <section id="geographic-visualization-dtw" class="slide level2">
 <h2>Geographic Visualization: DTW</h2>
 
@@ -799,20 +780,12 @@ Eric Mathieu Delmelle
 <h2>Geographic Visualization: PHL</h2>
 
 <img data-src="imgs/PHL.png" style="width:70.0%" class="r-stretch"></section>
-<section id="changing-clusters-1" class="slide level2">
-<h2>Changing clusters (1)</h2>
-
-<img data-src="imgs/sankey.png" style="width:70.0%" class="r-stretch"></section>
-<section id="changing-clusters-2" class="slide level2">
-<h2>Changing clusters (2)</h2>
-
-<img data-src="imgs/sankeyB.png" style="width:70.0%" class="r-stretch"></section>
 <section id="preliminary-observations-12" class="slide level2">
 <h2>Preliminary observations (1/2)</h2>
 <ul>
 <li>A strong group of census tracts remain in the same cluster
 <ul>
-<li>rural, but rapidly giving space to residential suburbs</li>
+<li>rural (pastel), but rapidly giving space to residential suburbs (blue)</li>
 </ul></li>
 <li>Cities tend to see a more diverse set of clusters
 <ul>
@@ -831,6 +804,7 @@ Eric Mathieu Delmelle
 <section id="next-steps" class="slide level2">
 <h2>Next steps</h2>
 <ul>
+<li>What if only 2 clusters?</li>
 <li>Data driven <code>PCA</code></li>
 <li>Associations with demographics factors (paper 2)</li>
 </ul>
